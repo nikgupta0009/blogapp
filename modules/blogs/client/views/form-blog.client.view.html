@@ -1,0 +1,40 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.blog._id ? 'Edit Blog' : 'New Blog'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.blogForm" class="form-horizontal" ng-submit="vm.save(vm.form.blogForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Title</label>
+          <input name="title" type="text" ng-model="vm.blog.title" id="title" class="form-control" placeholder="Title" required>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="body">Body</label>
+          <textarea name="body" type="text" ng-model="vm.blog.body" id="body" class="form-control" placeholder="Body" required></textarea>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="tags">Tags</label>
+          <input name="tags" type="text" ng-model="vm.blog.tags" id="tags" class="form-control" placeholder="Tags" required>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="category">Category</label>
+          <select name="category" type="text" ng-model="vm.blog.category" id="category" class="form-control" required>
+            <option value="">---Please Select---</option>
+            <option value="Business">Business</option>
+            <option value="Education">Education</option>
+            <option value="Technology">Technology</option>
+            <option value="Politics">Politics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">{{vm.blog._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
