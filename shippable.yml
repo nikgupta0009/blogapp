@@ -11,6 +11,7 @@ build:
 before_install:
   - sudo apt-get install ruby-full
   - npm install nsp
+  - npm install -g node-gyp
   - gem install sass
 
 ci:
