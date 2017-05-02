@@ -8,10 +8,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/meanjs/mean.git"
+    "url": "https://github.com/nikgupta0009/blogapp.git"
   },
   "engines": {
-    "node": ">=0.10.28",
+    "node": "6.10.2",
     "npm": ">=1.4.28"
   },
   "scripts": {
