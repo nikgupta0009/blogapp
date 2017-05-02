@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  - 5.3
+
+build:
+  env:
+  global:
+    - APP_NAME=blogapp
+  
+before_install:
+  - sudo apt-get install ruby-full
+  - npm install nsp
+  - gem install sass
+
+ci:
+  - npm install
+  - bower install
+  - npm test
+  - echo 'CI running'
+after_success:
+  - grunt build
